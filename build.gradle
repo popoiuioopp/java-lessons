@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClassName = 'com.example.Main'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task runLesson1(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.lesson1.Main'
+}
+
+task runLesson2(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.lesson2.Main'
+}
+
+task runLesson3(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.lesson3.Main'
+}
+
+task runLesson4(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.lesson4.Main'
+}
+
+task runLesson5(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.lesson5.Main'
+}
+
+task runBasic101(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.basic101.Main'
+}
