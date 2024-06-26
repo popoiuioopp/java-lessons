@@ -11,7 +11,7 @@ repositories {
 }
 
 application {
-    mainClassName = 'com.example.Main'
+    mainClass = 'com.example.Main'
 }
 
 dependencies {
@@ -23,32 +23,44 @@ test {
     useJUnitPlatform()
 }
 
+task runBasic101(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.example.basic101.Main'
+}
+
 task runLesson1(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.lesson1.Main'
+    mainClass = 'com.example.lesson1.Main'
 }
 
 task runLesson2(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.lesson2.Main'
+    mainClass = 'com.example.lesson2.Main'
 }
 
 task runLesson3(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.lesson3.Main'
+    mainClass = 'com.example.lesson3.Main'
 }
 
 task runLesson4(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.lesson4.Main'
+    mainClass = 'com.example.lesson4.Main'
 }
 
 task runLesson5(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.lesson5.Main'
+    mainClass = 'com.example.lesson5.Main'
 }
 
-task runBasic101(type: JavaExec) {
+task runLesson6(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'com.example.basic101.Main'
+    mainClass = 'com.example.lesson6.Main'
+    args 'input.txt'
+}
+
+task runLesson7(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.example.lesson7.Main'
+    args 'input.txt'
 }
