@@ -64,3 +64,9 @@ task runLesson7(type: JavaExec) {
     mainClass = 'com.example.lesson7.Main'
     args 'input.txt'
 }
+
+task runLesson8(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.example.lesson8.Main'
+    args 'input.txt'
+}
