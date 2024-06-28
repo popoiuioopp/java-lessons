@@ -7,5 +7,7 @@ public class Main {
         Shape circle = new Circle(7);
         System.out.println("Rectangle area: " + rectangle.calculateArea());
         System.out.println("Circle area: " + circle.calculateArea());
+        rectangle.display();
+        circle.display();
     }
 }
